@@ -6,23 +6,28 @@ const AccountProfileOnly = (props) => {
   const [verified, setVerified] = useState(false)
   return (
     <>
-      <div className={`account-profile-only-container ${props.rootClassName} `}>
-        <img
-          alt={props.profileImageSrc}
-          src={props.profileImageSrc}
-          profileImageSrc={props.imageProfileImageSrc}
-          className="Profile"
-        />
-        {verified && (
+      <a href={props.containerUrl} target="_blank" rel="noreferrer noopener">
+        <div
+          className={`account-profile-only-container ${props.rootClassName} `}
+        >
           <img
-            id="Verified-Badge"
-            alt="image"
-            src="/verified-badge.svg"
-            loading="lazy"
-            className="account-profile-only-image1 Badge-Verified"
+            id={props.userID}
+            alt={props.profileImageSrc}
+            src={props.profileImageSrc}
+            profileImageSrc={props.imageProfileImageSrc}
+            className="Profile"
           />
-        )}
-      </div>
+          {verified && (
+            <img
+              id="Verified-Badge"
+              alt="image"
+              src="/verified-badge.svg"
+              loading="lazy"
+              className="account-profile-only-image1 Badge-Verified"
+            />
+          )}
+        </div>
+      </a>
       <style jsx>
         {`
           .account-profile-only-container {
@@ -31,6 +36,7 @@ const AccountProfileOnly = (props) => {
             position: relative;
             align-items: center;
             justify-content: center;
+            text-decoration: none;
           }
           .account-profile-only-image1 {
             right: 0px;
@@ -44,23 +50,19 @@ const AccountProfileOnly = (props) => {
 }
 
 AccountProfileOnly.defaultProps = {
-  userFullName: 'Full Name',
+  containerUrl: 'https://autosell.io/profile/',
   profileImageSrc: 'https://play.teleporthq.io/static/svg/default-img.svg',
-  headingUserFullName1: '',
   rootClassName: '',
-  imageAlt: 'image',
   imageProfileImageSrc: '',
-  headingUserFullName: '',
+  userID: '',
 }
 
 AccountProfileOnly.propTypes = {
-  userFullName: PropTypes.string,
+  containerUrl: PropTypes.string,
   profileImageSrc: PropTypes.string,
-  headingUserFullName1: PropTypes.string,
   rootClassName: PropTypes.string,
-  imageAlt: PropTypes.string,
   imageProfileImageSrc: PropTypes.string,
-  headingUserFullName: PropTypes.string,
+  userID: PropTypes.string,
 }
 
 export default AccountProfileOnly

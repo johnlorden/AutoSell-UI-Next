@@ -175,6 +175,7 @@ const WhatsOnYourMind = (props) => {
             width: 100%;
             height: 50px;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
           }
@@ -230,34 +231,34 @@ const WhatsOnYourMind = (props) => {
 
 WhatsOnYourMind.defaultProps = {
   text1: undefined,
+  imageProfileImageSrc: '',
   rootClassName: '',
   text42: undefined,
   text21: undefined,
   text2: undefined,
+  profileImageSrc: 'https://play.teleporthq.io/static/svg/default-img.svg',
   text3: undefined,
   textinputId: 'Comment-Bar',
+  rootClassName1: '',
   text41: undefined,
   text211: undefined,
   postId: '',
-  rootClassName1: '',
-  profileImageSrc: 'https://play.teleporthq.io/static/svg/default-img.svg',
-  imageProfileImageSrc: '',
 }
 
 WhatsOnYourMind.propTypes = {
   text1: PropTypes.element,
+  imageProfileImageSrc: PropTypes.string,
   rootClassName: PropTypes.string,
   text42: PropTypes.element,
   text21: PropTypes.element,
   text2: PropTypes.element,
+  profileImageSrc: PropTypes.string,
   text3: PropTypes.element,
   textinputId: PropTypes.string,
+  rootClassName1: PropTypes.string,
   text41: PropTypes.element,
   text211: PropTypes.element,
   postId: PropTypes.string,
-  rootClassName1: PropTypes.string,
-  profileImageSrc: PropTypes.string,
-  imageProfileImageSrc: PropTypes.string,
 }
 
 export default WhatsOnYourMind

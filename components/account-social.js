@@ -9,6 +9,7 @@ const AccountSocial = (props) => {
       <a href={props.profileUrl} target="_blank" rel="noreferrer noopener">
         <div className={`account-social-container ${props.rootClassName} `}>
           <img
+            id={props.userID}
             alt={props.profileImageSrc}
             src={props.profileImageSrc}
             className="Profile"
@@ -70,6 +71,7 @@ AccountSocial.defaultProps = {
   headingUserFullName1: '',
   planName: 'Plan Name',
   profileImageSrc: 'https://play.teleporthq.io/static/svg/default-img.svg',
+  userID: '',
   profileUrl: 'https://www.teleporthq.io',
   userFullName: 'Full Name',
   imageAlt: 'image',
@@ -81,6 +83,7 @@ AccountSocial.propTypes = {
   headingUserFullName1: PropTypes.string,
   planName: PropTypes.string,
   profileImageSrc: PropTypes.string,
+  userID: PropTypes.string,
   profileUrl: PropTypes.string,
   userFullName: PropTypes.string,
   imageAlt: PropTypes.string,
