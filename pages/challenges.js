@@ -13,7 +13,7 @@ const Challenges = (props) => {
           <title>Challenges - AutoSell UI</title>
           <meta property="og:title" content="Challenges - AutoSell UI" />
         </Head>
-        <div className="TopBar">
+        <div className="challenges-top-bar TopBar">
           <div className="challenges-container1">
             <img
               alt="image"
@@ -38,7 +38,7 @@ const Challenges = (props) => {
               <a className="challenges-link2 button">Programs</a>
             </Link>
             <Link href="/jobs">
-              <a className="challenges-link3 button">Jobs</a>
+              <a className="button">Jobs</a>
             </Link>
             <button type="button" className="button ActiveButton">
               Challenges
@@ -52,7 +52,7 @@ const Challenges = (props) => {
             ></Account>
           </div>
         </div>
-        <div className="TopNav Bot">
+        <div className="challenges-container4 TopNav Bot">
           <Link href="/">
             <a className="challenges-link4 button">
               <svg viewBox="0 0 1024 1024" className="challenges-icon">
@@ -88,6 +88,7 @@ const Challenges = (props) => {
             </a>
           </Link>
         </div>
+        <div className="challenges-container5"></div>
       </div>
       <style jsx>
         {`
@@ -99,6 +100,9 @@ const Challenges = (props) => {
             align-items: center;
             flex-direction: column;
             justify-content: flex-start;
+          }
+          .challenges-top-bar {
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
           }
           .challenges-container1 {
             gap: var(--dl-space-space-unit);
@@ -138,19 +142,15 @@ const Challenges = (props) => {
             text-decoration: none;
             background-color: rgba(255, 255, 255, 0.05);
           }
-          .challenges-link3 {
-            padding-top: 0.6rem;
-            border-radius: 15px;
-            padding-bottom: 0.6rem;
-            text-decoration: none;
-            background-color: rgba(255, 255, 255, 0.05);
-          }
           .challenges-container3 {
             gap: var(--dl-space-space-unit);
             display: flex;
             position: relative;
             align-items: center;
             justify-content: center;
+          }
+          .challenges-container4 {
+            box-shadow: 5px 0px 10px 0px #000000;
           }
           .challenges-link4 {
             display: flex;
@@ -213,6 +213,14 @@ const Challenges = (props) => {
           .challenges-icon08 {
             width: 24px;
             height: 24px;
+          }
+          .challenges-container5 {
+            flex: 0 0 auto;
+            width: 100%;
+            border: 2px dashed rgba(120, 120, 120, 0.4);
+            height: 100px;
+            display: flex;
+            align-items: flex-start;
           }
           @media (max-width: 1600px) {
             .challenges-image {

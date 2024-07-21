@@ -266,12 +266,20 @@ const Account = (props) => {
           </div>
         )}
         {!moreAccountActions && (
-          <svg viewBox="0 0 1024 1024" className="account-icon38">
+          <svg
+            viewBox="0 0 1024 1024"
+            onClick={() => setSidebarDown(true)}
+            className="account-icon38"
+          >
             <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
           </svg>
         )}
         {moreAccountActions && (
-          <svg viewBox="0 0 1024 1024" className="account-icon40">
+          <svg
+            viewBox="0 0 1024 1024"
+            onClick={() => setMoreAccountActions(false)}
+            className="account-icon40"
+          >
             <path d="M316 366l196 196 196-196 60 60-256 256-256-256z"></path>
           </svg>
         )}

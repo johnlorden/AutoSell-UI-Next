@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 const Sidebar = (props) => {
   return (
     <>
-      <div className={`sidebar ${props.rootClassName} `}>
+      <div className="sidebar">
         <div className="sidebar-container">
           <div className="sidebar-container1">
             <Script
@@ -80,59 +80,48 @@ const Sidebar = (props) => {
           <span className="sidebar-text3">Testimonials</span>
         </button>
         <button
-          id="Webinar-nav-main"
-          type="button"
-          what="mainnav"
-          className="mainnavdefault"
-        >
-          <svg viewBox="0 0 1024 1024" className="sidebar-icon10">
-            <path d="M213.333 85.333c-35.328 0-67.413 14.379-90.496 37.504s-37.504 55.168-37.504 90.496v597.333c0 35.328 14.379 67.413 37.504 90.496s55.168 37.504 90.496 37.504h597.333c35.328 0 67.413-14.379 90.496-37.504s37.504-55.168 37.504-90.496v-597.333c0-35.328-14.379-67.413-37.504-90.496s-55.168-37.504-90.496-37.504zM853.333 341.333h-682.667v-128c0-11.776 4.736-22.4 12.501-30.165s18.389-12.501 30.165-12.501h597.333c11.776 0 22.4 4.736 30.165 12.501s12.501 18.389 12.501 30.165zM341.333 426.667v426.667h-128c-11.776 0-22.4-4.736-30.165-12.501s-12.501-18.389-12.501-30.165v-384zM426.667 853.333v-426.667h426.667v384c0 11.776-4.736 22.4-12.501 30.165s-18.389 12.501-30.165 12.501z"></path>
-          </svg>
-          <span className="sidebar-text4">Courses &amp; Webinars</span>
-        </button>
-        <button
           id="automate-nav-main"
           type="button"
           what="mainnav"
           className="mainnavdefault"
         >
-          <svg viewBox="0 0 1024 1024" className="sidebar-icon12">
-            <path d="M854 86q34 0 59 25t25 59v512q0 34-25 60t-59 26h-598l-170 170v-768q0-34 25-59t59-25h684z"></path>
+          <svg viewBox="0 0 1024 1024" className="sidebar-icon10">
+            <path d="M170.667 469.333v-85.333c0-35.371 14.293-67.285 37.504-90.496s55.125-37.504 90.496-37.504h494.336l-97.835 97.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l170.667-170.667c4.096-4.096 7.168-8.789 9.259-13.824s3.243-10.539 3.243-16.341c0-5.547-1.067-11.136-3.243-16.341-2.091-5.035-5.163-9.728-9.259-13.824l-170.667-170.667c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331l97.835 97.835h-494.336c-58.88 0-112.299 23.936-150.869 62.464s-62.464 91.989-62.464 150.869v85.333c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667zM853.333 554.667v85.333c0 35.371-14.293 67.285-37.504 90.496s-55.125 37.504-90.496 37.504h-494.336l97.835-97.835c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-170.667 170.667c-4.096 4.096-7.168 8.789-9.259 13.824-6.4 15.445-3.328 33.92 9.259 46.507l170.667 170.667c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331l-97.835-97.835h494.336c58.88 0 112.299-23.936 150.869-62.464s62.464-91.989 62.464-150.869v-85.333c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667z"></path>
           </svg>
-          <span className="sidebar-text5">Automate</span>
+          <span className="sidebar-text4">Automate</span>
         </button>
         <button
           id="payment-link-nav-main"
           type="button"
           what="mainnav"
-          className="sidebar-button6 mainnavdefault"
+          className="sidebar-button5 mainnavdefault"
         >
-          <svg viewBox="0 0 1024 1024" className="sidebar-icon14">
+          <svg viewBox="0 0 1024 1024" className="sidebar-icon12">
             <path d="M640 341.333h128c47.147 0 89.728 19.072 120.661 50.005s50.005 73.515 50.005 120.661-19.072 89.728-50.005 120.661-73.515 50.005-120.661 50.005h-128c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667h128c70.699 0 134.741-28.715 181.035-74.965s74.965-110.336 74.965-181.035-28.715-134.741-74.965-181.035-110.336-74.965-181.035-74.965h-128c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM384 682.667h-128c-47.147 0-89.728-19.072-120.661-50.005s-50.005-73.515-50.005-120.661 19.072-89.728 50.005-120.661 73.515-50.005 120.661-50.005h128c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-128c-70.699 0-134.741 28.715-181.035 74.965s-74.965 110.336-74.965 181.035 28.715 134.741 74.965 181.035 110.336 74.965 181.035 74.965h128c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667zM341.333 554.667h341.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-341.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
           </svg>
-          <span className="sidebar-text6">Payment Links</span>
+          <span className="sidebar-text5">Payment Links</span>
         </button>
         <button
           id="ReferandEarn-nav-main"
           type="button"
           what="mainnav"
-          className="sidebar-button7 mainnavdefault"
+          className="sidebar-button6 mainnavdefault"
         >
-          <svg viewBox="0 0 1097.142857142857 1024" className="sidebar-icon16">
+          <svg viewBox="0 0 1097.142857142857 1024" className="sidebar-icon14">
             <path d="M438.857 658.286h219.429v-54.857h-73.143v-256h-65.143l-84.571 78.286 44 45.714c13.714-12 22.286-18.286 31.429-32.571h1.143v164.571h-73.143v54.857zM731.429 512c0 104-62.857 237.714-182.857 237.714s-182.857-133.714-182.857-237.714 62.857-237.714 182.857-237.714 182.857 133.714 182.857 237.714zM1024 658.286v-292.571c-80.571 0-146.286-65.714-146.286-146.286h-658.286c0 80.571-65.714 146.286-146.286 146.286v292.571c80.571 0 146.286 65.714 146.286 146.286h658.286c0-80.571 65.714-146.286 146.286-146.286zM1097.143 182.857v658.286c0 20-16.571 36.571-36.571 36.571h-1024c-20 0-36.571-16.571-36.571-36.571v-658.286c0-20 16.571-36.571 36.571-36.571h1024c20 0 36.571 16.571 36.571 36.571z"></path>
           </svg>
-          <span className="sidebar-text7">Refer &amp; Earn</span>
+          <span className="sidebar-text6">Refer &amp; Earn</span>
         </button>
         <button
           id="AskAI-nav-main"
           type="button"
           what="mainnav"
-          className="sidebar-button8 mainnavdefault"
+          className="sidebar-button7 mainnavdefault"
         >
-          <svg viewBox="0 0 1024 1024" className="sidebar-icon18">
+          <svg viewBox="0 0 1024 1024" className="sidebar-icon16">
             <path d="M512 0c-278.748 0-505.458 222.762-511.848 499.974 5.92-241.864 189.832-435.974 415.848-435.974 229.75 0 416 200.576 416 448 0 53.020 42.98 96 96 96s96-42.98 96-96c0-282.77-229.23-512-512-512zM512 1024c278.748 0 505.458-222.762 511.848-499.974-5.92 241.864-189.832 435.974-415.848 435.974-229.75 0-416-200.576-416-448 0-53.020-42.98-96-96-96s-96 42.98-96 96c0 282.77 229.23 512 512 512z"></path>
           </svg>
-          <span className="sidebar-text8">Ask Autosell AI</span>
+          <span className="sidebar-text7">Ask Autosell AI</span>
         </button>
       </div>
       <style jsx>
@@ -185,6 +174,10 @@ const Sidebar = (props) => {
           .sidebar-text4 {
             width: 100%;
           }
+          .sidebar-button5 {
+            transition: 0.3s;
+          }
+
           .sidebar-icon12 {
             width: 24px;
             height: 24px;
@@ -214,17 +207,6 @@ const Sidebar = (props) => {
           .sidebar-text7 {
             width: 100%;
           }
-          .sidebar-button8 {
-            transition: 0.3s;
-          }
-
-          .sidebar-icon18 {
-            width: 24px;
-            height: 24px;
-          }
-          .sidebar-text8 {
-            width: 100%;
-          }
           .sidebar-root-class-name {
             top: 0px;
             left: 0px;
@@ -242,6 +224,9 @@ const Sidebar = (props) => {
               display: none;
             }
             .sidebar-root-class-name2 {
+              display: none;
+            }
+            .sidebar-root-class-name4 {
               display: none;
             }
           }

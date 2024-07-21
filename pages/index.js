@@ -2,8 +2,15 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 
+import Script from 'dangerous-html/react'
+
 import SearchBar from '../components/search-bar'
 import Account from '../components/account'
+import Sidebar from '../components/sidebar'
+import Story from '../components/story'
+import WhatsOnYourMind from '../components/whats-on-your-mind'
+import MultipleImagePost from '../components/multiple-image-post'
+import AccountSocialFriendRequest from '../components/account-social-friend-request'
 
 const Newsfeed = (props) => {
   return (
@@ -13,8 +20,8 @@ const Newsfeed = (props) => {
           <title>AutoSell UI</title>
           <meta property="og:title" content="AutoSell UI" />
         </Head>
-        <div className="TopBar">
-          <div className="newsfeed-container1">
+        <div className="newsfeed-top-bar TopBar">
+          <div className="newsfeed-container01">
             <img
               alt="image"
               src="/autosell%20icon.svg"
@@ -50,12 +57,80 @@ const Newsfeed = (props) => {
               Challenges
             </button>
           </div>
-          <div className="newsfeed-container3">
+          <div className="newsfeed-container03">
             <Account
               planName="Plan Name"
               userFullName="Full Name"
               rootClassName="account-root-class-name1"
             ></Account>
+          </div>
+        </div>
+        <div className="newsfeed-container04"></div>
+        <div className="newsfeed-container05">
+          <div>
+            <div className="newsfeed-container07">
+              <Script
+                html={`
+    <script>
+        const carousel = document.getElementById('Stories');
+        const scrollLeftButton = document.getElementById('scroll-left');
+        const scrollRightButton = document.getElementById('scroll-right');
+
+        function updateButtons() {
+            if (carousel.scrollLeft === 0) {
+                scrollLeftButton.classList.add('hidden');
+            } else {
+                scrollLeftButton.classList.remove('hidden');
+            }
+
+            if (carousel.scrollWidth - carousel.clientWidth === carousel.scrollLeft) {
+                scrollRightButton.classList.add('hidden');
+            } else {
+                scrollRightButton.classList.remove('hidden');
+            }
+        }
+
+        scrollLeftButton.addEventListener('click', () => {
+            carousel.scrollBy({
+                top: 0,
+                left: -200, // Adjust as needed
+                behavior: 'smooth'
+            });
+        });
+
+        scrollRightButton.addEventListener('click', () => {
+            carousel.scrollBy({
+                top: 0,
+                left: 200, // Adjust as needed
+                behavior: 'smooth'
+            });
+        });
+
+        carousel.addEventListener('scroll', updateButtons);
+
+        // Initial check to set button visibility
+        updateButtons();
+
+        // Allow horizontal scrolling with mouse wheel
+        carousel.addEventListener('wheel', (event) => {
+            if (event.deltaY > 0) {
+                carousel.scrollBy({
+                    top: 0,
+                    left: 200,
+                    behavior: 'smooth'
+                });
+            } else {
+                carousel.scrollBy({
+                    top: 0,
+                    left: -200,
+                    behavior: 'smooth'
+                });
+            }
+            event.preventDefault();
+        });
+    </script>`}
+              ></Script>
+            </div>
           </div>
         </div>
         <div className="TopNav Bot">
@@ -64,7 +139,7 @@ const Newsfeed = (props) => {
               <svg viewBox="0 0 1024 1024" className="newsfeed-icon">
                 <path d="M170.667 512c94.251 0 179.541 38.144 241.365 99.968s99.968 147.115 99.968 241.365c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667c0-117.803-47.787-224.555-124.971-301.696s-183.893-124.971-301.696-124.971c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM170.667 213.333c176.725 0 336.683 71.595 452.565 187.435s187.435 275.84 187.435 452.565c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667c0-200.277-81.237-381.696-212.437-512.896s-312.619-212.437-512.896-212.437c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM298.667 810.667c0-23.552-9.6-44.928-25.003-60.331s-36.779-25.003-60.331-25.003-44.928 9.6-60.331 25.003-25.003 36.779-25.003 60.331 9.6 44.928 25.003 60.331 36.779 25.003 60.331 25.003 44.928-9.6 60.331-25.003 25.003-36.779 25.003-60.331z"></path>
               </svg>
-              <span className="newsfeed-text3">Newsfeed</span>
+              <span className="newsfeed-text03">Newsfeed</span>
             </a>
           </Link>
           <Link href="/marketplace">
@@ -94,19 +169,248 @@ const Newsfeed = (props) => {
             </a>
           </Link>
         </div>
+        <div className="newsfeed-container09">
+          <div className="newsfeed-container10"></div>
+          <Sidebar rootClassName="sidebar-root-class-name4"></Sidebar>
+          <div className="newsfeed-container11">
+            <div className="newsfeed-container12">
+              <div id="scroll-left" className="newsfeed-container13">
+                <svg viewBox="0 0 1024 1024" className="newsfeed-icon10">
+                  <path d="M542.165 780.501l-225.835-225.835h494.336c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-494.336l225.835-225.835c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-298.667 298.667c-4.096 4.096-7.168 8.789-9.259 13.824-2.176 5.205-3.243 10.795-3.243 16.341 0 10.923 4.181 21.845 12.501 30.165l298.667 298.667c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path>
+                </svg>
+              </div>
+              <div id="scroll-right" className="newsfeed-container14">
+                <svg viewBox="0 0 1024 1024" className="newsfeed-icon12">
+                  <path d="M481.835 243.499l225.835 225.835h-494.336c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667h494.336l-225.835 225.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l298.667-298.667c3.925-3.925 7.083-8.619 9.259-13.824 4.309-10.453 4.309-22.229 0-32.683-2.091-5.035-5.163-9.728-9.259-13.824l-298.667-298.667c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path>
+                </svg>
+              </div>
+              <div id="Stories" className="newsfeed-container15">
+                <div id="Story" className="newsfeed-container16">
+                  <div
+                    id="CreateStory"
+                    className="newsfeed-container17 StoryIco"
+                  >
+                    <svg viewBox="0 0 1024 1024" className="StoryIcon">
+                      <path d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <Story rootClassName="story-root-class-name1"></Story>
+                <Story rootClassName="story-root-class-name5"></Story>
+                <Story rootClassName="story-root-class-name4"></Story>
+                <Story rootClassName="story-root-class-name11"></Story>
+                <Story rootClassName="story-root-class-name10"></Story>
+                <Story rootClassName="story-root-class-name9"></Story>
+                <Story rootClassName="story-root-class-name8"></Story>
+                <Story rootClassName="story-root-class-name3"></Story>
+                <Story rootClassName="story-root-class-name2"></Story>
+                <Story rootClassName="story-root-class-name"></Story>
+                <Story rootClassName="story-root-class-name7"></Story>
+                <Story rootClassName="story-root-class-name6"></Story>
+              </div>
+            </div>
+            <WhatsOnYourMind
+              text1={
+                <fragment>
+                  <span>Live Stream</span>
+                </fragment>
+              }
+              text2={
+                <fragment>
+                  <span>Media</span>
+                </fragment>
+              }
+              text3={
+                <fragment>
+                  <span>Post</span>
+                </fragment>
+              }
+              text21={
+                <fragment>
+                  <span>Carousel</span>
+                </fragment>
+              }
+              text41={
+                <fragment>
+                  <span className="newsfeed-text08">Name</span>
+                </fragment>
+              }
+              text42={
+                <fragment>
+                  <span>,</span>
+                </fragment>
+              }
+              text211={
+                <fragment>
+                  <span id="Create-Story">Story</span>
+                </fragment>
+              }
+              rootClassName="whats-on-your-mind-root-class-name1"
+            ></WhatsOnYourMind>
+            <div id="Posts" className="newsfeed-container18">
+              <MultipleImagePost
+                text={
+                  <fragment>
+                    <span>Text</span>
+                  </fragment>
+                }
+                text3={
+                  <fragment>
+                    <span>Send</span>
+                  </fragment>
+                }
+                button={
+                  <fragment>
+                    <span>Report Post</span>
+                  </fragment>
+                }
+                likeCount={
+                  <fragment>
+                    <span>0</span>
+                  </fragment>
+                }
+                commentCount={
+                  <fragment>
+                    <span>0</span>
+                  </fragment>
+                }
+                rootClassName="multiple-image-post-root-class-name1"
+              ></MultipleImagePost>
+              <MultipleImagePost
+                text={
+                  <fragment>
+                    <span>Text</span>
+                  </fragment>
+                }
+                text3={
+                  <fragment>
+                    <span>Send</span>
+                  </fragment>
+                }
+                button={
+                  <fragment>
+                    <span>Report Post</span>
+                  </fragment>
+                }
+                likeCount={
+                  <fragment>
+                    <span>0</span>
+                  </fragment>
+                }
+                commentCount={
+                  <fragment>
+                    <span>0</span>
+                  </fragment>
+                }
+                rootClassName="multiple-image-post-root-class-name2"
+              ></MultipleImagePost>
+            </div>
+          </div>
+          <div className="newsfeed-container19"></div>
+          <div className="newsfeed-container20 sidebar">
+            <div className="newsfeed-container21">
+              <h3 className="HeadingColored">Announcements</h3>
+              <div className="newsfeed-container22">
+                <div
+                  data-thq="slider"
+                  data-autoplay="true"
+                  data-navigation="false"
+                  data-pagination="false"
+                  data-loop="true"
+                  data-disable-autoplay-on-interaction="false"
+                  data-pause-autoplay-on-mouse-enter="true"
+                  data-autoplay-delay="3500"
+                  className="newsfeed-slider"
+                >
+                  <div data-thq="slider-wrapper" className="swiper-wrapper">
+                    <div
+                      data-thq="slider-slide"
+                      className="newsfeed-slider-slide swiper-slide"
+                    ></div>
+                    <div
+                      data-thq="slider-slide"
+                      className="newsfeed-slider-slide1 swiper-slide"
+                    ></div>
+                    <div
+                      data-thq="slider-slide"
+                      className="newsfeed-slider-slide2 swiper-slide"
+                    ></div>
+                  </div>
+                  <div
+                    data-thq="slider-pagination"
+                    className="newsfeed-slider-pagination swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"
+                  >
+                    <div
+                      data-thq="slider-pagination-bullet"
+                      className="swiper-pagination-bullet swiper-pagination-bullet-active"
+                    ></div>
+                    <div
+                      data-thq="slider-pagination-bullet"
+                      className="swiper-pagination-bullet"
+                    ></div>
+                    <div
+                      data-thq="slider-pagination-bullet"
+                      className="swiper-pagination-bullet"
+                    ></div>
+                  </div>
+                  <div
+                    data-thq="slider-button-prev"
+                    className="newsfeed-slider-button-prev swiper-button-prev"
+                  ></div>
+                  <div
+                    data-thq="slider-button-next"
+                    className="newsfeed-slider-button-next swiper-button-next"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div className="newsfeed-container23">
+              <h3 className="HeadingColored">Friend Request</h3>
+              <div className="newsfeed-container24">
+                <AccountSocialFriendRequest
+                  rootClassName="account-social-friend-request-root-class-name3"
+                  DeclineButton={
+                    <fragment>
+                      <span>Decline</span>
+                    </fragment>
+                  }
+                ></AccountSocialFriendRequest>
+                <AccountSocialFriendRequest
+                  rootClassName="account-social-friend-request-root-class-name4"
+                  DeclineButton={
+                    <fragment>
+                      <span>Decline</span>
+                    </fragment>
+                  }
+                ></AccountSocialFriendRequest>
+                <AccountSocialFriendRequest
+                  rootClassName="account-social-friend-request-root-class-name5"
+                  DeclineButton={
+                    <fragment>
+                      <span>Decline</span>
+                    </fragment>
+                  }
+                ></AccountSocialFriendRequest>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <style jsx>
         {`
           .newsfeed-container {
             width: 100%;
-            cursor: pointer;
             display: flex;
             min-height: 100vh;
             align-items: center;
             flex-direction: column;
             justify-content: flex-start;
           }
-          .newsfeed-container1 {
+          .newsfeed-top-bar {
+            z-index: 900;
+            background-color: #ffffff;
+          }
+          .newsfeed-container01 {
             gap: var(--dl-space-space-unit);
             display: flex;
             align-items: center;
@@ -129,11 +433,13 @@ const Newsfeed = (props) => {
             padding-bottom: 0.6rem;
           }
           .newsfeed-button1 {
+            transition: 0.3s;
             padding-top: 0.6rem;
             border-radius: 15px;
             padding-bottom: 0.6rem;
             background-color: rgba(255, 255, 255, 0.05);
           }
+
           .newsfeed-button2 {
             padding-top: 0.6rem;
             border-radius: 15px;
@@ -152,12 +458,31 @@ const Newsfeed = (props) => {
             padding-bottom: 0.6rem;
             background-color: rgba(255, 255, 255, 0.05);
           }
-          .newsfeed-container3 {
+          .newsfeed-container03 {
             gap: var(--dl-space-space-unit);
             display: flex;
             position: relative;
             align-items: center;
             justify-content: center;
+          }
+          .newsfeed-container04 {
+            flex: 0 0 auto;
+            width: 100%;
+            border: 2px dashed rgba(120, 120, 120, 0.4);
+            height: 100px;
+            display: flex;
+            align-items: flex-start;
+          }
+          .newsfeed-container05 {
+            flex: 0 0 auto;
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+          }
+          .newsfeed-container07 {
+            display: contents;
           }
           .newsfeed-link {
             gap: var(--dl-space-space-unit);
@@ -221,6 +546,230 @@ const Newsfeed = (props) => {
             width: 24px;
             height: 24px;
           }
+          .newsfeed-container09 {
+            flex: 1;
+            width: var(--dl-size-size-maxwidth);
+            height: 100%;
+            display: flex;
+            position: relative;
+            max-width: 100%;
+            margin-top: var(--dl-space-space-unit);
+            align-items: flex-start;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+          .newsfeed-container10 {
+            flex: 0 0 auto;
+            width: 20%;
+            height: 100%;
+            display: flex;
+            max-width: 288px;
+            min-width: 288px;
+            align-items: flex-start;
+          }
+          .newsfeed-container11 {
+            gap: var(--dl-space-space-oneandhalfunits);
+            flex: 0 0 auto;
+            width: 800px;
+            height: 100%;
+            display: flex;
+            max-width: 100%;
+            align-items: flex-start;
+            padding-left: var(--dl-space-space-unit);
+            padding-right: var(--dl-space-space-unit);
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .newsfeed-container12 {
+            width: 100%;
+            display: flex;
+            position: relative;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .newsfeed-container13 {
+            top: 0px;
+            left: var(--dl-space-space-unit);
+            width: var(--dl-size-size-small);
+            bottom: 0px;
+            height: var(--dl-size-size-small);
+            margin: auto;
+            display: flex;
+            padding: var(--dl-space-space-halfunit);
+            z-index: 99;
+            position: absolute;
+            align-items: center;
+            border-radius: 50%;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.56);
+          }
+          .newsfeed-icon10 {
+            fill: #ffffff;
+            width: 24px;
+            height: 24px;
+          }
+          .newsfeed-container14 {
+            top: 0px;
+            right: var(--dl-space-space-unit);
+            width: var(--dl-size-size-small);
+            bottom: 0px;
+            height: var(--dl-size-size-small);
+            margin: auto;
+            display: flex;
+            padding: var(--dl-space-space-halfunit);
+            z-index: 99;
+            position: absolute;
+            align-items: center;
+            border-radius: 50%;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.56);
+          }
+          .newsfeed-icon12 {
+            fill: #ffffff;
+            width: 24px;
+            height: 24px;
+          }
+          .newsfeed-container15 {
+            gap: var(--dl-space-space-halfunit);
+            flex: 0 0 auto;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            align-items: flex-start;
+            user-select: none;
+            justify-content: flex-start;
+          }
+          .newsfeed-container16 {
+            display: flex;
+            position: relative;
+          }
+          .newsfeed-container17 {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            z-index: 100;
+            align-items: center;
+            border-width: 0px;
+            justify-content: center;
+            background-image: linear-gradient(
+              353.61deg,
+              #86f2b1 -2.46%,
+              #6932eb 40.1%,
+              #6c29ca 96.52%
+            );
+          }
+          .newsfeed-text08 {
+            font-size: 18px;
+          }
+          .newsfeed-container18 {
+            gap: var(--dl-space-space-unit);
+            flex: 0 0 auto;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            max-width: 100%;
+            align-self: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .newsfeed-container19 {
+            flex: 0 0 auto;
+            width: 20%;
+            height: 100%;
+            display: flex;
+            max-width: 288px;
+            min-width: 288px;
+            align-items: flex-start;
+          }
+          .newsfeed-container20 {
+            gap: var(--dl-space-space-oneandhalfunits);
+            top: 0px;
+            right: 0px;
+            display: flex;
+            z-index: 100;
+            position: absolute;
+            align-self: flex-end;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .newsfeed-container21 {
+            gap: var(--dl-space-space-halfunit);
+            flex: 1;
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .newsfeed-container22 {
+            height: 100%;
+            display: flex;
+            padding: var(--dl-space-space-halfunit);
+            align-items: center;
+            border-color: var(--dl-color-theme-neutral-dark);
+            border-width: 1px;
+            border-radius: 20px;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .newsfeed-slider {
+            flex: 1;
+            width: 274px;
+            height: auto;
+            overflow: hidden;
+            object-fit: cover;
+            aspect-ratio: 16/9;
+            border-radius: 10px;
+          }
+          .newsfeed-slider-slide {
+            display: flex;
+            background-size: 100%;
+            background-image: url('https://images.unsplash.com/photo-1698778574083-279be0ac6681?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY5OTk3NzU2N3w&ixlib=rb-4.0.3&q=80&w=300');
+          }
+          .newsfeed-slider-slide1 {
+            display: flex;
+            background-size: 100%;
+            background-image: url('https://images.unsplash.com/photo-1697384333613-de519c7367c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY5OTk3NzAzN3w&ixlib=rb-4.0.3&q=80&w=300');
+          }
+          .newsfeed-slider-slide2 {
+            display: flex;
+            background-size: 100%;
+            background-image: url('https://images.unsplash.com/photo-1698180687511-bd6c0104ee98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY5OTk3NzQ5NXw&ixlib=rb-4.0.3&q=80&w=300');
+          }
+          .newsfeed-slider-pagination {
+            display: none;
+          }
+          .newsfeed-slider-button-prev {
+            color: var(--dl-color-theme-neutral-dark);
+            display: none;
+          }
+          .newsfeed-slider-button-next {
+            color: var(--dl-color-theme-neutral-dark);
+            display: none;
+          }
+          .newsfeed-container23 {
+            gap: var(--dl-space-space-unit);
+            flex: 1;
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .newsfeed-container24 {
+            gap: var(--dl-space-space-halfunit);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+          }
           @media (max-width: 1600px) {
             .newsfeed-image {
               display: none;
@@ -234,11 +783,22 @@ const Newsfeed = (props) => {
               display: none;
             }
           }
+          @media (max-width: 991px) {
+            .newsfeed-container09 {
+              justify-content: center;
+            }
+            .newsfeed-container10 {
+              display: none;
+            }
+            .newsfeed-container19 {
+              display: none;
+            }
+          }
           @media (max-width: 479px) {
             .newsfeed-link {
               padding-left: 1rem;
             }
-            .newsfeed-text3 {
+            .newsfeed-text03 {
               align-self: center;
             }
             .newsfeed-link1 {
