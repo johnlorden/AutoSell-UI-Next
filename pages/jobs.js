@@ -34,8 +34,8 @@ const Jobs = (props) => {
             <Link href="/marketplace">
               <a className="jobs-link1 button">Marketplace</a>
             </Link>
-            <Link href="/programs">
-              <a className="jobs-link2 button">Programs</a>
+            <Link href="/courses-and-webinars">
+              <a className="jobs-link2 button">Courses &amp; Webinars</a>
             </Link>
             <button type="button" className="button ActiveButton">
               Jobs
@@ -46,9 +46,145 @@ const Jobs = (props) => {
           </div>
           <div className="jobs-container3">
             <Account
+              text={
+                <fragment>
+                  <span className="jobs-text">Notification Title</span>
+                </fragment>
+              }
+              text1={
+                <fragment>
+                  <span className="jobs-text01">Notification Title</span>
+                </fragment>
+              }
+              text2={
+                <fragment>
+                  <span className="jobs-text02">Notifications</span>
+                </fragment>
+              }
+              button={
+                <fragment>
+                  <span>Let&apos;s Automate!</span>
+                </fragment>
+              }
+              text21={
+                <fragment>
+                  <span className="jobs-text04">Messages</span>
+                </fragment>
+              }
+              button1={
+                <fragment>
+                  <span>Button</span>
+                </fragment>
+              }
+              heading={
+                <fragment>
+                  <span className="Announcement-Text">Announcements</span>
+                </fragment>
+              }
+              text211={
+                <fragment>
+                  <span className="jobs-text07">Messages</span>
+                </fragment>
+              }
               planName="Plan Name"
+              UserFullName={
+                <fragment>
+                  <span className="Announcement-Text">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
               userFullName="Full Name"
               rootClassName="account-root-class-name5"
+              UserRecentMessage={
+                <fragment>
+                  <span>
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList1={
+                <fragment>
+                  <span className="jobs-text14">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList2={
+                <fragment>
+                  <span className="jobs-text17">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList3={
+                <fragment>
+                  <span className="jobs-text20">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList21={
+                <fragment>
+                  <span className="jobs-text23">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList22={
+                <fragment>
+                  <span className="jobs-text26">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage1={
+                <fragment>
+                  <span className="jobs-text29">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage2={
+                <fragment>
+                  <span className="jobs-text32">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage3={
+                <fragment>
+                  <span className="jobs-text35">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage21={
+                <fragment>
+                  <span className="jobs-text38">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage22={
+                <fragment>
+                  <span className="jobs-text41">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
             ></Account>
           </div>
         </div>
@@ -67,7 +203,7 @@ const Jobs = (props) => {
               </svg>
             </a>
           </Link>
-          <Link href="/programs">
+          <Link href="/courses-and-webinars">
             <a className="jobs-link6 button">
               <svg viewBox="0 0 1024 1024" className="jobs-icon04">
                 <path d="M512 682.667h-341.333c-11.776 0-22.4-4.736-30.165-12.501s-12.501-18.389-12.501-30.165v-426.667c0-11.776 4.736-22.4 12.501-30.165s18.389-12.501 30.165-12.501h682.667c11.776 0 22.4 4.736 30.165 12.501s12.501 18.389 12.501 30.165v426.667c0 11.776-4.736 22.4-12.501 30.165s-18.389 12.501-30.165 12.501zM469.333 768v85.333h-128c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667h341.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-128v-85.333h298.667c35.328 0 67.413-14.379 90.496-37.504s37.504-55.168 37.504-90.496v-426.667c0-35.328-14.379-67.413-37.504-90.496s-55.168-37.504-90.496-37.504h-682.667c-35.328 0-67.413 14.379-90.496 37.504s-37.504 55.168-37.504 90.496v426.667c0 35.328 14.379 67.413 37.504 90.496s55.168 37.504 90.496 37.504z"></path>
@@ -78,7 +214,7 @@ const Jobs = (props) => {
             <svg viewBox="0 0 1024 1024" className="jobs-icon06">
               <path d="M384 256v-42.667c0-11.776 4.736-22.4 12.501-30.165s18.389-12.501 30.165-12.501h170.667c11.776 0 22.4 4.736 30.165 12.501s12.501 18.389 12.501 30.165v42.667zM384 853.333v-512h256v512zM298.667 341.333v512h-128c-11.776 0-22.4-4.736-30.165-12.501s-12.501-18.389-12.501-30.165v-426.667c0-11.776 4.736-22.4 12.501-30.165s18.389-12.501 30.165-12.501zM725.333 256v-42.667c0-35.328-14.379-67.413-37.504-90.496s-55.168-37.504-90.496-37.504h-170.667c-35.328 0-67.413 14.379-90.496 37.504s-37.504 55.168-37.504 90.496v42.667h-128c-35.328 0-67.413 14.379-90.496 37.504s-37.504 55.168-37.504 90.496v426.667c0 35.328 14.379 67.413 37.504 90.496s55.168 37.504 90.496 37.504h682.667c35.328 0 67.413-14.379 90.496-37.504s37.504-55.168 37.504-90.496v-426.667c0-35.328-14.379-67.413-37.504-90.496s-55.168-37.504-90.496-37.504zM725.333 853.333v-512h128c11.776 0 22.4 4.736 30.165 12.501s12.501 18.389 12.501 30.165v426.667c0 11.776-4.736 22.4-12.501 30.165s-18.389 12.501-30.165 12.501z"></path>
             </svg>
-            <span className="jobs-text">Jobs</span>
+            <span className="jobs-text44">Jobs</span>
           </button>
           <Link href="/challenges">
             <a className="jobs-link7 button">
@@ -151,6 +287,89 @@ const Jobs = (props) => {
             position: relative;
             align-items: center;
             justify-content: center;
+          }
+          .jobs-text {
+            width: 1200px;
+            height: var(--dl-size-size-xsmall);
+            font-size: 16px;
+            font-style: normal;
+            font-family: 'Montserrat';
+            font-weight: 700;
+          }
+          .jobs-text01 {
+            width: 1200px;
+            height: var(--dl-size-size-xsmall);
+          }
+          .jobs-text02 {
+            width: 100%;
+            font-style: normal;
+            text-align: left;
+            font-weight: 700;
+          }
+          .jobs-text04 {
+            width: auto;
+            text-align: left;
+          }
+          .jobs-text07 {
+            width: auto;
+            font-style: normal;
+            text-align: left;
+            font-weight: 700;
+          }
+          .jobs-text14 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .jobs-text17 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .jobs-text20 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .jobs-text23 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .jobs-text26 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .jobs-text29 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .jobs-text32 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .jobs-text35 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .jobs-text38 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .jobs-text41 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
           }
           .jobs-link4 {
             display: flex;
@@ -228,7 +447,7 @@ const Jobs = (props) => {
             }
           }
           @media (max-width: 991px) {
-            .jobs-text {
+            .jobs-text44 {
               align-self: center;
             }
           }
@@ -245,7 +464,7 @@ const Jobs = (props) => {
             .jobs-button1 {
               padding-left: 1rem;
             }
-            .jobs-text {
+            .jobs-text44 {
               align-self: center;
             }
             .jobs-link7 {

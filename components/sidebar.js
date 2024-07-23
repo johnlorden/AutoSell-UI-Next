@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 const Sidebar = (props) => {
   return (
     <>
-      <div className="sidebar">
+      <div className={`sidebar ${props.rootClassName} `}>
         <div className="sidebar-container">
           <div className="sidebar-container1">
             <Script
@@ -228,6 +228,7 @@ const Sidebar = (props) => {
             }
             .sidebar-root-class-name4 {
               display: none;
+              opacity: 0;
             }
           }
           @media (max-width: 767px) {

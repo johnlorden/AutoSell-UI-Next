@@ -39,17 +39,17 @@ const AccountSocialFriendRequest = (props) => {
           </div>
           <div className="account-social-friend-request-container4">
             <button
-              type="button"
               name="AcceptFriendRequest"
+              type="button"
               RequestFrom={props.userID}
               className="account-social-friend-request-button button"
             >
               <span>Accept</span>
             </button>
             <button
+              name="DeclineFriendRequest"
               type="button"
               RequestFrom={props.userID}
-              name="DeclineFriendRequest"
               className="account-social-friend-request-button1 button"
             >
               <span>Decline</span>
@@ -126,21 +126,21 @@ const AccountSocialFriendRequest = (props) => {
 }
 
 AccountSocialFriendRequest.defaultProps = {
-  profileUrl: 'https://www.teleporthq.io',
   rootClassName: '',
-  profileImageSrc: 'https://play.teleporthq.io/static/svg/default-img.svg',
-  userID: '',
   userFullName: 'Full Name',
+  profileImageSrc: 'https://play.teleporthq.io/static/svg/default-img.svg',
   imageAlt: 'image',
+  profileUrl: 'https://www.teleporthq.io',
+  userID: '',
 }
 
 AccountSocialFriendRequest.propTypes = {
-  profileUrl: PropTypes.string,
   rootClassName: PropTypes.string,
-  profileImageSrc: PropTypes.string,
-  userID: PropTypes.string,
   userFullName: PropTypes.string,
+  profileImageSrc: PropTypes.string,
   imageAlt: PropTypes.string,
+  profileUrl: PropTypes.string,
+  userID: PropTypes.string,
 }
 
 export default AccountSocialFriendRequest

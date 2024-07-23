@@ -14,7 +14,8 @@ const AccountProfileOnly = (props) => {
             id={props.userID}
             alt={props.profileImageSrc}
             src={props.profileImageSrc}
-            profileImageSrc={props.imageProfileImageSrc}
+            profileImageSrc={props.imageProfileImageSrc2}
+            imageProfileImageSrc={props.imageImageProfileImageSrc}
             className="Profile"
           />
           {verified && (
@@ -52,16 +53,22 @@ const AccountProfileOnly = (props) => {
 AccountProfileOnly.defaultProps = {
   containerUrl: 'https://autosell.io/profile/',
   profileImageSrc: 'https://play.teleporthq.io/static/svg/default-img.svg',
+  imageProfileImageSrc1: '',
+  imageImageProfileImageSrc: '',
   rootClassName: '',
   imageProfileImageSrc: '',
+  imageProfileImageSrc2: '',
   userID: '',
 }
 
 AccountProfileOnly.propTypes = {
   containerUrl: PropTypes.string,
   profileImageSrc: PropTypes.string,
+  imageProfileImageSrc1: PropTypes.string,
+  imageImageProfileImageSrc: PropTypes.string,
   rootClassName: PropTypes.string,
   imageProfileImageSrc: PropTypes.string,
+  imageProfileImageSrc2: PropTypes.string,
   userID: PropTypes.string,
 }
 

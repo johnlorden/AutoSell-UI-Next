@@ -10,7 +10,10 @@ const MultipleImagePost = (props) => {
   const [more, setMore] = useState(false)
   return (
     <>
-      <div id={props.postId} className={`Post ${props.rootClassName} `}>
+      <div
+        id={props.postId}
+        className={`multiple-image-post-container Post ${props.rootClassName} `}
+      >
         <div className="multiple-image-post-container1">
           {more && (
             <div className="multiple-image-post-container2 MoreActions">
@@ -141,6 +144,10 @@ const MultipleImagePost = (props) => {
       </div>
       <style jsx>
         {`
+          .multiple-image-post-container {
+            max-height: 600px;
+            min-height: 500px;
+          }
           .multiple-image-post-container1 {
             flex: 0 0 auto;
             width: 100%;

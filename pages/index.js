@@ -10,6 +10,7 @@ import Sidebar from '../components/sidebar'
 import Story from '../components/story'
 import WhatsOnYourMind from '../components/whats-on-your-mind'
 import MultipleImagePost from '../components/multiple-image-post'
+import Announcements from '../components/announcements'
 import AccountSocialFriendRequest from '../components/account-social-friend-request'
 
 const Newsfeed = (props) => {
@@ -41,27 +42,170 @@ const Newsfeed = (props) => {
             >
               Newsfeed
             </button>
-            <button type="button" className="newsfeed-button1 button">
-              <span>
-                <span>Marketplace</span>
-                <br></br>
-              </span>
-            </button>
-            <button type="button" className="newsfeed-button2 button">
-              Programs
-            </button>
-            <button type="button" className="newsfeed-button3 button">
-              Jobs
-            </button>
-            <button type="button" className="newsfeed-button4 button">
-              Challenges
-            </button>
+            <Link href="/marketplace">
+              <a className="newsfeed-link button">
+                <span>
+                  <span>Marketplace</span>
+                  <br></br>
+                </span>
+              </a>
+            </Link>
+            <Link href="/courses-and-webinars">
+              <a className="newsfeed-link1 button">
+                <span>
+                  <span>Courses &amp; Webinars</span>
+                  <br></br>
+                </span>
+              </a>
+            </Link>
+            <Link href="/jobs">
+              <a className="newsfeed-link2 button">Jobs</a>
+            </Link>
+            <Link href="/challenges">
+              <a className="newsfeed-link3 button">Challenges</a>
+            </Link>
           </div>
           <div className="newsfeed-container03">
             <Account
+              text={
+                <fragment>
+                  <span className="newsfeed-text06">Notification Title</span>
+                </fragment>
+              }
+              text1={
+                <fragment>
+                  <span className="newsfeed-text07">Notification Title</span>
+                </fragment>
+              }
+              text2={
+                <fragment>
+                  <span className="newsfeed-text08">Notifications</span>
+                </fragment>
+              }
+              button={
+                <fragment>
+                  <span>Let&apos;s Automate!</span>
+                </fragment>
+              }
+              text21={
+                <fragment>
+                  <span className="newsfeed-text10">Messages</span>
+                </fragment>
+              }
+              button1={
+                <fragment>
+                  <span>Button</span>
+                </fragment>
+              }
+              heading={
+                <fragment>
+                  <span className="Announcement-Text">Announcements</span>
+                </fragment>
+              }
+              text211={
+                <fragment>
+                  <span className="newsfeed-text13">Messages</span>
+                </fragment>
+              }
               planName="Plan Name"
+              UserFullName={
+                <fragment>
+                  <span className="Announcement-Text">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
               userFullName="Full Name"
               rootClassName="account-root-class-name1"
+              UserRecentMessage={
+                <fragment>
+                  <span>
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList1={
+                <fragment>
+                  <span className="newsfeed-text20">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList2={
+                <fragment>
+                  <span className="newsfeed-text23">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList3={
+                <fragment>
+                  <span className="newsfeed-text26">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList21={
+                <fragment>
+                  <span className="newsfeed-text29">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList22={
+                <fragment>
+                  <span className="newsfeed-text32">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage1={
+                <fragment>
+                  <span className="newsfeed-text35">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage2={
+                <fragment>
+                  <span className="newsfeed-text38">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage3={
+                <fragment>
+                  <span className="newsfeed-text41">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage21={
+                <fragment>
+                  <span className="newsfeed-text44">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage22={
+                <fragment>
+                  <span className="newsfeed-text47">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
             ></Account>
           </div>
         </div>
@@ -135,34 +279,34 @@ const Newsfeed = (props) => {
         </div>
         <div className="TopNav Bot">
           <Link href="/">
-            <a className="newsfeed-link button ActiveButton">
+            <a className="newsfeed-link4 button ActiveButton">
               <svg viewBox="0 0 1024 1024" className="newsfeed-icon">
                 <path d="M170.667 512c94.251 0 179.541 38.144 241.365 99.968s99.968 147.115 99.968 241.365c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667c0-117.803-47.787-224.555-124.971-301.696s-183.893-124.971-301.696-124.971c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM170.667 213.333c176.725 0 336.683 71.595 452.565 187.435s187.435 275.84 187.435 452.565c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667c0-200.277-81.237-381.696-212.437-512.896s-312.619-212.437-512.896-212.437c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM298.667 810.667c0-23.552-9.6-44.928-25.003-60.331s-36.779-25.003-60.331-25.003-44.928 9.6-60.331 25.003-25.003 36.779-25.003 60.331 9.6 44.928 25.003 60.331 36.779 25.003 60.331 25.003 44.928-9.6 60.331-25.003 25.003-36.779 25.003-60.331z"></path>
               </svg>
-              <span className="newsfeed-text03">Newsfeed</span>
+              <span className="newsfeed-text50">Newsfeed</span>
             </a>
           </Link>
           <Link href="/marketplace">
-            <a className="newsfeed-link1 button">
+            <a className="newsfeed-link5 button">
               <svg viewBox="0 0 1024 1024" className="newsfeed-icon02">
                 <path d="M908.672 602.325c24.875-25.003 37.291-57.685 37.291-90.24 0.043-32.597-12.373-65.365-37.291-90.453l-366.507-366.507c-7.723-7.68-18.389-12.459-30.165-12.459h-426.667c-23.552 0-42.667 19.115-42.667 42.667v426.667c0 10.923 4.181 21.845 12.501 30.208l366.592 366.165c25.003 24.96 57.856 37.461 90.539 37.419s65.536-12.544 90.453-37.504zM848.341 541.995l-305.92 305.92c-8.363 8.363-19.2 12.544-30.165 12.544s-21.845-4.139-30.165-12.459l-354.091-353.707v-366.293h366.336l354.005 354.005c8.192 8.235 12.331 19.072 12.331 30.037 0 10.923-4.139 21.717-12.331 29.952zM341.333 298.667c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667 19.115 42.667 42.667 42.667 42.667-19.115 42.667-42.667z"></path>
               </svg>
             </a>
           </Link>
-          <button type="button" className="newsfeed-button5 button">
+          <button type="button" className="newsfeed-button1 button">
             <svg viewBox="0 0 1024 1024" className="newsfeed-icon04">
               <path d="M512 682.667h-341.333c-11.776 0-22.4-4.736-30.165-12.501s-12.501-18.389-12.501-30.165v-426.667c0-11.776 4.736-22.4 12.501-30.165s18.389-12.501 30.165-12.501h682.667c11.776 0 22.4 4.736 30.165 12.501s12.501 18.389 12.501 30.165v426.667c0 11.776-4.736 22.4-12.501 30.165s-18.389 12.501-30.165 12.501zM469.333 768v85.333h-128c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667h341.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-128v-85.333h298.667c35.328 0 67.413-14.379 90.496-37.504s37.504-55.168 37.504-90.496v-426.667c0-35.328-14.379-67.413-37.504-90.496s-55.168-37.504-90.496-37.504h-682.667c-35.328 0-67.413 14.379-90.496 37.504s-37.504 55.168-37.504 90.496v426.667c0 35.328 14.379 67.413 37.504 90.496s55.168 37.504 90.496 37.504z"></path>
             </svg>
           </button>
           <Link href="/jobs">
-            <a className="newsfeed-link2 button">
+            <a className="newsfeed-link6 button">
               <svg viewBox="0 0 1024 1024" className="newsfeed-icon06">
                 <path d="M384 256v-42.667c0-11.776 4.736-22.4 12.501-30.165s18.389-12.501 30.165-12.501h170.667c11.776 0 22.4 4.736 30.165 12.501s12.501 18.389 12.501 30.165v42.667zM384 853.333v-512h256v512zM298.667 341.333v512h-128c-11.776 0-22.4-4.736-30.165-12.501s-12.501-18.389-12.501-30.165v-426.667c0-11.776 4.736-22.4 12.501-30.165s18.389-12.501 30.165-12.501zM725.333 256v-42.667c0-35.328-14.379-67.413-37.504-90.496s-55.168-37.504-90.496-37.504h-170.667c-35.328 0-67.413 14.379-90.496 37.504s-37.504 55.168-37.504 90.496v42.667h-128c-35.328 0-67.413 14.379-90.496 37.504s-37.504 55.168-37.504 90.496v426.667c0 35.328 14.379 67.413 37.504 90.496s55.168 37.504 90.496 37.504h682.667c35.328 0 67.413-14.379 90.496-37.504s37.504-55.168 37.504-90.496v-426.667c0-35.328-14.379-67.413-37.504-90.496s-55.168-37.504-90.496-37.504zM725.333 853.333v-512h128c11.776 0 22.4 4.736 30.165 12.501s12.501 18.389 12.501 30.165v426.667c0 11.776-4.736 22.4-12.501 30.165s-18.389 12.501-30.165 12.501z"></path>
               </svg>
             </a>
           </Link>
           <Link href="/challenges">
-            <a className="newsfeed-link3 button">
+            <a className="newsfeed-link7 button">
               <svg viewBox="0 0 1024 1024" className="newsfeed-icon08">
                 <path d="M639.403 658.091l32 241.152-137.429-82.475c-13.269-7.851-29.995-8.363-43.904 0l-137.429 82.475 32.043-241.109c39.296 15.829 82.304 24.533 127.317 24.533s88.021-8.747 127.403-24.576zM654.165 554.283c-2.475 1.28-4.821 2.773-6.955 4.48-39.253 24.448-85.547 38.571-135.211 38.571-70.699 0-134.656-28.587-181.035-74.965s-74.965-110.336-74.965-181.035 28.587-134.656 74.965-181.035 110.336-74.965 181.035-74.965 134.656 28.587 181.035 74.965 74.965 110.336 74.965 181.035-28.587 134.656-74.965 181.035c-11.861 11.861-24.875 22.571-38.869 31.915zM304.64 612.48l-48.256 363.221c-3.115 23.339 13.312 44.8 36.693 47.915 9.984 1.323 19.669-0.939 27.563-5.717l191.36-114.816 191.403 114.816c20.224 12.117 46.421 5.589 58.539-14.635 5.205-8.661 6.955-18.389 5.717-27.563l-48.213-363.307c11.947-9.173 23.296-19.115 33.92-29.739 61.696-61.696 99.968-147.072 99.968-241.323s-38.272-179.627-99.968-241.365-147.115-99.968-241.365-99.968-179.627 38.272-241.365 99.968-99.968 147.115-99.968 241.365 38.272 179.627 99.968 241.365c10.667 10.667 22.016 20.608 33.963 29.781z"></path>
               </svg>
@@ -188,6 +332,7 @@ const Newsfeed = (props) => {
                 <div id="Story" className="newsfeed-container16">
                   <div
                     id="CreateStory"
+                    onClick="CreateStory()"
                     className="newsfeed-container17 StoryIco"
                   >
                     <svg viewBox="0 0 1024 1024" className="StoryIcon">
@@ -232,7 +377,7 @@ const Newsfeed = (props) => {
               }
               text41={
                 <fragment>
-                  <span className="newsfeed-text08">Name</span>
+                  <span className="newsfeed-text55">Name</span>
                 </fragment>
               }
               text42={
@@ -308,88 +453,39 @@ const Newsfeed = (props) => {
           </div>
           <div className="newsfeed-container19"></div>
           <div className="newsfeed-container20 sidebar">
+            <Announcements
+              heading={
+                <fragment>
+                  <span>Announcements</span>
+                </fragment>
+              }
+            ></Announcements>
             <div className="newsfeed-container21">
-              <h3 className="HeadingColored">Announcements</h3>
-              <div className="newsfeed-container22">
-                <div
-                  data-thq="slider"
-                  data-autoplay="true"
-                  data-navigation="false"
-                  data-pagination="false"
-                  data-loop="true"
-                  data-disable-autoplay-on-interaction="false"
-                  data-pause-autoplay-on-mouse-enter="true"
-                  data-autoplay-delay="3500"
-                  className="newsfeed-slider"
-                >
-                  <div data-thq="slider-wrapper" className="swiper-wrapper">
-                    <div
-                      data-thq="slider-slide"
-                      className="newsfeed-slider-slide swiper-slide"
-                    ></div>
-                    <div
-                      data-thq="slider-slide"
-                      className="newsfeed-slider-slide1 swiper-slide"
-                    ></div>
-                    <div
-                      data-thq="slider-slide"
-                      className="newsfeed-slider-slide2 swiper-slide"
-                    ></div>
-                  </div>
-                  <div
-                    data-thq="slider-pagination"
-                    className="newsfeed-slider-pagination swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"
-                  >
-                    <div
-                      data-thq="slider-pagination-bullet"
-                      className="swiper-pagination-bullet swiper-pagination-bullet-active"
-                    ></div>
-                    <div
-                      data-thq="slider-pagination-bullet"
-                      className="swiper-pagination-bullet"
-                    ></div>
-                    <div
-                      data-thq="slider-pagination-bullet"
-                      className="swiper-pagination-bullet"
-                    ></div>
-                  </div>
-                  <div
-                    data-thq="slider-button-prev"
-                    className="newsfeed-slider-button-prev swiper-button-prev"
-                  ></div>
-                  <div
-                    data-thq="slider-button-next"
-                    className="newsfeed-slider-button-next swiper-button-next"
-                  ></div>
-                </div>
-              </div>
-            </div>
-            <div className="newsfeed-container23">
               <h3 className="HeadingColored">Friend Request</h3>
-              <div className="newsfeed-container24">
+              <div className="newsfeed-container22">
                 <AccountSocialFriendRequest
+                  DeclineButton={
+                    <fragment>
+                      <span>Decline</span>
+                    </fragment>
+                  }
                   rootClassName="account-social-friend-request-root-class-name3"
+                ></AccountSocialFriendRequest>
+                <AccountSocialFriendRequest
                   DeclineButton={
                     <fragment>
                       <span>Decline</span>
                     </fragment>
                   }
-                ></AccountSocialFriendRequest>
-                <AccountSocialFriendRequest
                   rootClassName="account-social-friend-request-root-class-name4"
-                  DeclineButton={
-                    <fragment>
-                      <span>Decline</span>
-                    </fragment>
-                  }
                 ></AccountSocialFriendRequest>
                 <AccountSocialFriendRequest
-                  rootClassName="account-social-friend-request-root-class-name5"
                   DeclineButton={
                     <fragment>
                       <span>Decline</span>
                     </fragment>
                   }
+                  rootClassName="account-social-friend-request-root-class-name5"
                 ></AccountSocialFriendRequest>
               </div>
             </div>
@@ -432,30 +528,34 @@ const Newsfeed = (props) => {
             border-radius: 15px;
             padding-bottom: 0.6rem;
           }
-          .newsfeed-button1 {
+          .newsfeed-link {
             transition: 0.3s;
             padding-top: 0.6rem;
             border-radius: 15px;
             padding-bottom: 0.6rem;
+            text-decoration: none;
             background-color: rgba(255, 255, 255, 0.05);
           }
 
-          .newsfeed-button2 {
+          .newsfeed-link1 {
             padding-top: 0.6rem;
             border-radius: 15px;
             padding-bottom: 0.6rem;
+            text-decoration: none;
             background-color: rgba(255, 255, 255, 0.05);
           }
-          .newsfeed-button3 {
+          .newsfeed-link2 {
             padding-top: 0.6rem;
             border-radius: 15px;
             padding-bottom: 0.6rem;
+            text-decoration: none;
             background-color: rgba(255, 255, 255, 0.05);
           }
-          .newsfeed-button4 {
+          .newsfeed-link3 {
             padding-top: 0.6rem;
             border-radius: 15px;
             padding-bottom: 0.6rem;
+            text-decoration: none;
             background-color: rgba(255, 255, 255, 0.05);
           }
           .newsfeed-container03 {
@@ -464,6 +564,89 @@ const Newsfeed = (props) => {
             position: relative;
             align-items: center;
             justify-content: center;
+          }
+          .newsfeed-text06 {
+            width: 1200px;
+            height: var(--dl-size-size-xsmall);
+            font-size: 16px;
+            font-style: normal;
+            font-family: 'Montserrat';
+            font-weight: 700;
+          }
+          .newsfeed-text07 {
+            width: 1200px;
+            height: var(--dl-size-size-xsmall);
+          }
+          .newsfeed-text08 {
+            width: 100%;
+            font-style: normal;
+            text-align: left;
+            font-weight: 700;
+          }
+          .newsfeed-text10 {
+            width: auto;
+            text-align: left;
+          }
+          .newsfeed-text13 {
+            width: auto;
+            font-style: normal;
+            text-align: left;
+            font-weight: 700;
+          }
+          .newsfeed-text20 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .newsfeed-text23 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .newsfeed-text26 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .newsfeed-text29 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .newsfeed-text32 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .newsfeed-text35 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .newsfeed-text38 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .newsfeed-text41 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .newsfeed-text44 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .newsfeed-text47 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
           }
           .newsfeed-container04 {
             flex: 0 0 auto;
@@ -484,7 +667,7 @@ const Newsfeed = (props) => {
           .newsfeed-container07 {
             display: contents;
           }
-          .newsfeed-link {
+          .newsfeed-link4 {
             gap: var(--dl-space-space-unit);
             display: flex;
             align-items: center;
@@ -494,7 +677,7 @@ const Newsfeed = (props) => {
             width: 24px;
             height: 24px;
           }
-          .newsfeed-link1 {
+          .newsfeed-link5 {
             display: flex;
             padding-top: 0.6rem;
             border-radius: 15px;
@@ -507,7 +690,7 @@ const Newsfeed = (props) => {
             width: 24px;
             height: 24px;
           }
-          .newsfeed-button5 {
+          .newsfeed-button1 {
             display: flex;
             padding-top: 0.6rem;
             border-radius: 15px;
@@ -520,7 +703,7 @@ const Newsfeed = (props) => {
             width: 24px;
             height: 24px;
           }
-          .newsfeed-link2 {
+          .newsfeed-link6 {
             display: flex;
             padding-top: 0.6rem;
             border-radius: 15px;
@@ -533,7 +716,7 @@ const Newsfeed = (props) => {
             width: 24px;
             height: 24px;
           }
-          .newsfeed-link3 {
+          .newsfeed-link7 {
             display: flex;
             padding-top: 0.6rem;
             border-radius: 15px;
@@ -661,7 +844,7 @@ const Newsfeed = (props) => {
               #6c29ca 96.52%
             );
           }
-          .newsfeed-text08 {
+          .newsfeed-text55 {
             font-size: 18px;
           }
           .newsfeed-container18 {
@@ -698,62 +881,6 @@ const Newsfeed = (props) => {
             justify-content: flex-start;
           }
           .newsfeed-container21 {
-            gap: var(--dl-space-space-halfunit);
-            flex: 1;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-          }
-          .newsfeed-container22 {
-            height: 100%;
-            display: flex;
-            padding: var(--dl-space-space-halfunit);
-            align-items: center;
-            border-color: var(--dl-color-theme-neutral-dark);
-            border-width: 1px;
-            border-radius: 20px;
-            flex-direction: column;
-            justify-content: center;
-          }
-          .newsfeed-slider {
-            flex: 1;
-            width: 274px;
-            height: auto;
-            overflow: hidden;
-            object-fit: cover;
-            aspect-ratio: 16/9;
-            border-radius: 10px;
-          }
-          .newsfeed-slider-slide {
-            display: flex;
-            background-size: 100%;
-            background-image: url('https://images.unsplash.com/photo-1698778574083-279be0ac6681?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY5OTk3NzU2N3w&ixlib=rb-4.0.3&q=80&w=300');
-          }
-          .newsfeed-slider-slide1 {
-            display: flex;
-            background-size: 100%;
-            background-image: url('https://images.unsplash.com/photo-1697384333613-de519c7367c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY5OTk3NzAzN3w&ixlib=rb-4.0.3&q=80&w=300');
-          }
-          .newsfeed-slider-slide2 {
-            display: flex;
-            background-size: 100%;
-            background-image: url('https://images.unsplash.com/photo-1698180687511-bd6c0104ee98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY5OTk3NzQ5NXw&ixlib=rb-4.0.3&q=80&w=300');
-          }
-          .newsfeed-slider-pagination {
-            display: none;
-          }
-          .newsfeed-slider-button-prev {
-            color: var(--dl-color-theme-neutral-dark);
-            display: none;
-          }
-          .newsfeed-slider-button-next {
-            color: var(--dl-color-theme-neutral-dark);
-            display: none;
-          }
-          .newsfeed-container23 {
             gap: var(--dl-space-space-unit);
             flex: 1;
             width: 100%;
@@ -763,7 +890,7 @@ const Newsfeed = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .newsfeed-container24 {
+          .newsfeed-container22 {
             gap: var(--dl-space-space-halfunit);
             display: flex;
             align-items: center;
@@ -782,6 +909,12 @@ const Newsfeed = (props) => {
             .newsfeed-image1 {
               display: none;
             }
+            .newsfeed-container19 {
+              display: none;
+            }
+            .newsfeed-container20 {
+              display: none;
+            }
           }
           @media (max-width: 991px) {
             .newsfeed-container09 {
@@ -795,22 +928,22 @@ const Newsfeed = (props) => {
             }
           }
           @media (max-width: 479px) {
-            .newsfeed-link {
+            .newsfeed-link4 {
               padding-left: 1rem;
             }
-            .newsfeed-text03 {
+            .newsfeed-text50 {
               align-self: center;
             }
-            .newsfeed-link1 {
+            .newsfeed-link5 {
               padding-left: 1rem;
             }
-            .newsfeed-button5 {
+            .newsfeed-button1 {
               padding-left: 1rem;
             }
-            .newsfeed-link2 {
+            .newsfeed-link6 {
               padding-left: 1rem;
             }
-            .newsfeed-link3 {
+            .newsfeed-link7 {
               padding-left: 1rem;
             }
           }

@@ -72,7 +72,7 @@ const LiveVideoPost = (props) => {
           <video
             src={props.videoSrc}
             poster="https://play.teleporthq.io/static/svg/videoposter.svg"
-            className="VideoPost PostImage Live"
+            className="VideoPost Live PostImage"
           ></video>
         </div>
         <div className="live-video-post-container5">
@@ -254,31 +254,31 @@ const LiveVideoPost = (props) => {
 }
 
 LiveVideoPost.defaultProps = {
-  postId: '',
+  videoSrc: '',
+  text: undefined,
+  textinputId1: 'Comment-Bar',
   profileImageSrc: '',
   userFullName: 'Full Name',
-  text: undefined,
-  videoSrc: '',
   postId1: '',
   likeCount1: undefined,
-  commentCount1: undefined,
-  textinputId1: 'Comment-Bar',
-  button: undefined,
+  postId: '',
   text31: undefined,
+  button: undefined,
+  commentCount1: undefined,
 }
 
 LiveVideoPost.propTypes = {
-  postId: PropTypes.string,
+  videoSrc: PropTypes.string,
+  text: PropTypes.element,
+  textinputId1: PropTypes.string,
   profileImageSrc: PropTypes.string,
   userFullName: PropTypes.string,
-  text: PropTypes.element,
-  videoSrc: PropTypes.string,
   postId1: PropTypes.string,
   likeCount1: PropTypes.element,
-  commentCount1: PropTypes.element,
-  textinputId1: PropTypes.string,
-  button: PropTypes.element,
+  postId: PropTypes.string,
   text31: PropTypes.element,
+  button: PropTypes.element,
+  commentCount1: PropTypes.element,
 }
 
 export default LiveVideoPost

@@ -49,9 +49,145 @@ const Search = (props) => {
           </div>
           <div className="search-container4">
             <Account
+              text={
+                <fragment>
+                  <span className="search-text03">Notification Title</span>
+                </fragment>
+              }
+              text1={
+                <fragment>
+                  <span className="search-text04">Notification Title</span>
+                </fragment>
+              }
+              text2={
+                <fragment>
+                  <span className="search-text05">Notifications</span>
+                </fragment>
+              }
+              button={
+                <fragment>
+                  <span>Let&apos;s Automate!</span>
+                </fragment>
+              }
+              text21={
+                <fragment>
+                  <span className="search-text07">Messages</span>
+                </fragment>
+              }
+              button1={
+                <fragment>
+                  <span>Button</span>
+                </fragment>
+              }
+              heading={
+                <fragment>
+                  <span className="Announcement-Text">Announcements</span>
+                </fragment>
+              }
+              text211={
+                <fragment>
+                  <span className="search-text10">Messages</span>
+                </fragment>
+              }
               planName="Plan Name"
+              UserFullName={
+                <fragment>
+                  <span className="Announcement-Text">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
               userFullName="Full Name"
               rootClassName="account-root-class-name2"
+              UserRecentMessage={
+                <fragment>
+                  <span>
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList1={
+                <fragment>
+                  <span className="search-text17">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList2={
+                <fragment>
+                  <span className="search-text20">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList3={
+                <fragment>
+                  <span className="search-text23">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList21={
+                <fragment>
+                  <span className="search-text26">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList22={
+                <fragment>
+                  <span className="search-text29">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage1={
+                <fragment>
+                  <span className="search-text32">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage2={
+                <fragment>
+                  <span className="search-text35">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage3={
+                <fragment>
+                  <span className="search-text38">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage21={
+                <fragment>
+                  <span className="search-text41">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage22={
+                <fragment>
+                  <span className="search-text44">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
             ></Account>
           </div>
         </div>
@@ -152,6 +288,89 @@ const Search = (props) => {
             position: relative;
             align-items: center;
             justify-content: center;
+          }
+          .search-text03 {
+            width: 1200px;
+            height: var(--dl-size-size-xsmall);
+            font-size: 16px;
+            font-style: normal;
+            font-family: 'Montserrat';
+            font-weight: 700;
+          }
+          .search-text04 {
+            width: 1200px;
+            height: var(--dl-size-size-xsmall);
+          }
+          .search-text05 {
+            width: 100%;
+            font-style: normal;
+            text-align: left;
+            font-weight: 700;
+          }
+          .search-text07 {
+            width: auto;
+            text-align: left;
+          }
+          .search-text10 {
+            width: auto;
+            font-style: normal;
+            text-align: left;
+            font-weight: 700;
+          }
+          .search-text17 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .search-text20 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .search-text23 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .search-text26 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .search-text29 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .search-text32 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .search-text35 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .search-text38 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .search-text41 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .search-text44 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
           }
           @media (max-width: 1600px) {
             .search-container3 {

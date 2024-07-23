@@ -34,8 +34,13 @@ const Marketplace = (props) => {
             <button type="button" className="button ActiveButton">
               Marketplace
             </button>
-            <Link href="/programs">
-              <a className="marketplace-link1 button">Programs</a>
+            <Link href="/courses-and-webinars">
+              <a className="marketplace-link1 button">
+                <span>
+                  <span>Courses &amp; Webinars</span>
+                  <br></br>
+                </span>
+              </a>
             </Link>
             <Link href="/jobs">
               <a className="marketplace-link2 button">Jobs</a>
@@ -46,9 +51,145 @@ const Marketplace = (props) => {
           </div>
           <div className="marketplace-container3">
             <Account
+              text={
+                <fragment>
+                  <span className="marketplace-text03">Notification Title</span>
+                </fragment>
+              }
+              text1={
+                <fragment>
+                  <span className="marketplace-text04">Notification Title</span>
+                </fragment>
+              }
+              text2={
+                <fragment>
+                  <span className="marketplace-text05">Notifications</span>
+                </fragment>
+              }
+              button={
+                <fragment>
+                  <span>Let&apos;s Automate!</span>
+                </fragment>
+              }
+              text21={
+                <fragment>
+                  <span className="marketplace-text07">Messages</span>
+                </fragment>
+              }
+              button1={
+                <fragment>
+                  <span>Button</span>
+                </fragment>
+              }
+              heading={
+                <fragment>
+                  <span className="Announcement-Text">Announcements</span>
+                </fragment>
+              }
+              text211={
+                <fragment>
+                  <span className="marketplace-text10">Messages</span>
+                </fragment>
+              }
               planName="Plan Name"
+              UserFullName={
+                <fragment>
+                  <span className="Announcement-Text">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
               userFullName="Full Name"
               rootClassName="account-root-class-name3"
+              UserRecentMessage={
+                <fragment>
+                  <span>
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList1={
+                <fragment>
+                  <span className="marketplace-text17">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList2={
+                <fragment>
+                  <span className="marketplace-text20">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList3={
+                <fragment>
+                  <span className="marketplace-text23">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList21={
+                <fragment>
+                  <span className="marketplace-text26">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              userFullNameMessageList22={
+                <fragment>
+                  <span className="marketplace-text29">
+                    <span>UserFullName</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage1={
+                <fragment>
+                  <span className="marketplace-text32">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage2={
+                <fragment>
+                  <span className="marketplace-text35">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage3={
+                <fragment>
+                  <span className="marketplace-text38">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage21={
+                <fragment>
+                  <span className="marketplace-text41">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
+              conversationRecentMessage22={
+                <fragment>
+                  <span className="marketplace-text44">
+                    <span>RecentMessage</span>
+                    <br></br>
+                  </span>
+                </fragment>
+              }
             ></Account>
           </div>
         </div>
@@ -151,6 +292,89 @@ const Marketplace = (props) => {
             position: relative;
             align-items: center;
             justify-content: center;
+          }
+          .marketplace-text03 {
+            width: 1200px;
+            height: var(--dl-size-size-xsmall);
+            font-size: 16px;
+            font-style: normal;
+            font-family: 'Montserrat';
+            font-weight: 700;
+          }
+          .marketplace-text04 {
+            width: 1200px;
+            height: var(--dl-size-size-xsmall);
+          }
+          .marketplace-text05 {
+            width: 100%;
+            font-style: normal;
+            text-align: left;
+            font-weight: 700;
+          }
+          .marketplace-text07 {
+            width: auto;
+            text-align: left;
+          }
+          .marketplace-text10 {
+            width: auto;
+            font-style: normal;
+            text-align: left;
+            font-weight: 700;
+          }
+          .marketplace-text17 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .marketplace-text20 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .marketplace-text23 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .marketplace-text26 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .marketplace-text29 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+          }
+          .marketplace-text32 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .marketplace-text35 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .marketplace-text38 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .marketplace-text41 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .marketplace-text44 {
+            width: var(--dl-size-size-maxwidth);
+            height: var(--dl-size-size-xsmall);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
           }
           .marketplace-link4 {
             display: flex;
